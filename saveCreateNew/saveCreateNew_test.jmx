@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="saveCreateNew_test" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.2.3.17. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="kbn-version" elementType="Header">
+            <stringProp name="Header.name">kbn-version</stringProp>
+            <stringProp name="Header.value">7.10.0</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="saveCreateNew" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_find?default_search_operator=AND&amp;fields=title&amp;page=1&amp;per_page=1000&amp;search_fields=title%5E3&amp;search_fields=description&amp;type=search&amp;type=index-pattern" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="per_page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">per_page</stringProp>
+                  <stringProp name="Argument.value">1000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="search_fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">search_fields</stringProp>
+                  <stringProp name="Argument.value">description</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">page</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fields</stringProp>
+                  <stringProp name="Argument.value">title</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">index-pattern</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="default_search_operator" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">default_search_operator</stringProp>
+                  <stringProp name="Argument.value">AND</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_find</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;telemetry&quot;,&quot;type&quot;:&quot;telemetry&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_find?fields=title&amp;per_page=10000&amp;type=index-pattern" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="per_page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">per_page</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fields</stringProp>
+                  <stringProp name="Argument.value">title</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">index-pattern</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_find</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;ff959d40-b880-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;index-pattern&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:36.614Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:36.614Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_find?fields=title&amp;per_page=10&amp;search=%22savedCreateNew%22&amp;search_fields=title&amp;type=visualization" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="per_page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">per_page</stringProp>
+                  <stringProp name="Argument.value">10</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="search" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">search</stringProp>
+                  <stringProp name="Argument.value">&quot;savedCreateNew&quot;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="search_fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">search_fields</stringProp>
+                  <stringProp name="Argument.value">title</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fields</stringProp>
+                  <stringProp name="Argument.value">title</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">visualization</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_find</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:50.683Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:50.683Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/visualization?overwrite=true" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;attributes&quot;:{&quot;title&quot;:&quot;savedCreateNew&quot;,&quot;visState&quot;:&quot;{\&quot;title\&quot;:\&quot;savedCreateNew\&quot;,\&quot;type\&quot;:\&quot;heatmap\&quot;,\&quot;aggs\&quot;:[{\&quot;id\&quot;:\&quot;1\&quot;,\&quot;enabled\&quot;:true,\&quot;type\&quot;:\&quot;count\&quot;,\&quot;params\&quot;:{},\&quot;schema\&quot;:\&quot;metric\&quot;}],\&quot;params\&quot;:{\&quot;type\&quot;:\&quot;heatmap\&quot;,\&quot;addTooltip\&quot;:true,\&quot;addLegend\&quot;:true,\&quot;enableHover\&quot;:false,\&quot;legendPosition\&quot;:\&quot;right\&quot;,\&quot;times\&quot;:[],\&quot;colorsNumber\&quot;:4,\&quot;colorSchema\&quot;:\&quot;Greens\&quot;,\&quot;setColorRange\&quot;:false,\&quot;colorsRange\&quot;:[],\&quot;invertColors\&quot;:false,\&quot;percentageMode\&quot;:false,\&quot;valueAxes\&quot;:[{\&quot;show\&quot;:false,\&quot;id\&quot;:\&quot;ValueAxis-1\&quot;,\&quot;type\&quot;:\&quot;value\&quot;,\&quot;scale\&quot;:{\&quot;type\&quot;:\&quot;linear\&quot;,\&quot;defaultYExtents\&quot;:false},\&quot;labels\&quot;:{\&quot;show\&quot;:false,\&quot;rotate\&quot;:0,\&quot;overwriteColor\&quot;:false,\&quot;color\&quot;:\&quot;black\&quot;}}]}}&quot;,&quot;uiStateJSON&quot;:&quot;{}&quot;,&quot;description&quot;:&quot;&quot;,&quot;version&quot;:1,&quot;kibanaSavedObjectMeta&quot;:{&quot;searchSourceJSON&quot;:&quot;{\&quot;query\&quot;:{\&quot;query\&quot;:\&quot;\&quot;,\&quot;language\&quot;:\&quot;kuery\&quot;},\&quot;filter\&quot;:[],\&quot;indexRefName\&quot;:\&quot;kibanaSavedObjectMeta.searchSourceJSON.index\&quot;}&quot;}},&quot;references&quot;:[{&quot;name&quot;:&quot;kibanaSavedObjectMeta.searchSourceJSON.index&quot;,&quot;type&quot;:&quot;index-pattern&quot;,&quot;id&quot;:&quot;ff959d40-b880-11e8-a6d9-e546fe2bba5f&quot;}]}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/visualization?overwrite=true</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;telemetry&quot;,&quot;type&quot;:&quot;telemetry&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_find?fields=title&amp;per_page=10000&amp;type=index-pattern" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="per_page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">per_page</stringProp>
+                  <stringProp name="Argument.value">10000</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="fields" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fields</stringProp>
+                  <stringProp name="Argument.value">title</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">type</stringProp>
+                  <stringProp name="Argument.value">index-pattern</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_find</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;c2b413f0-303a-11eb-9fac-e9f841543b79&quot;,&quot;type&quot;:&quot;dashboard&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;37cc8650-b882-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;ed8436b0-b88b-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;09ffee60-b88c-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;1c389590-b88d-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;45e07720-b890-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;10f1a240-b891-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;b80e6540-b891-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;4b3ec120-b892-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;9ca7aa90-b892-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;9c6f83f0-bb4d-11e8-9c84-77068524bcab&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;b72dd430-bb4d-11e8-9c84-77068524bcab&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;3ba638e0-b894-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;search&quot;},{&quot;id&quot;:&quot;a5898930-303b-11eb-9fac-e9f841543b79&quot;,&quot;type&quot;:&quot;visualization&quot;},{&quot;id&quot;:&quot;ff959d40-b880-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;index-pattern&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/metrics/vis/data" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timerange&quot;:{&quot;timezone&quot;:&quot;Asia/Jakarta&quot;,&quot;min&quot;:&quot;2020-11-19T23:03:52.960Z&quot;,&quot;max&quot;:&quot;2020-11-26T23:03:52.960Z&quot;},&quot;query&quot;:[{&quot;language&quot;:&quot;kuery&quot;,&quot;query&quot;:&quot;&quot;}],&quot;filters&quot;:[],&quot;panels&quot;:[{&quot;id&quot;:&quot;61ca57f0-469d-11e7-af02-69e470af7417&quot;,&quot;type&quot;:&quot;timeseries&quot;,&quot;series&quot;:[{&quot;id&quot;:&quot;ea20ae70-b88d-11e8-a451-f37365e9f268&quot;,&quot;color&quot;:&quot;rgba(240,138,217,1)&quot;,&quot;split_mode&quot;:&quot;everything&quot;,&quot;metrics&quot;:[{&quot;id&quot;:&quot;ea20ae71-b88d-11e8-a451-f37365e9f268&quot;,&quot;type&quot;:&quot;sum&quot;,&quot;field&quot;:&quot;taxful_total_price&quot;}],&quot;separate_axis&quot;:0,&quot;axis_position&quot;:&quot;right&quot;,&quot;formatter&quot;:&quot;number&quot;,&quot;chart_type&quot;:&quot;line&quot;,&quot;line_width&quot;:1,&quot;point_size&quot;:1,&quot;fill&quot;:&quot;0.7&quot;,&quot;stacked&quot;:&quot;none&quot;,&quot;filter&quot;:{&quot;query&quot;:&quot;products.product_name:*trouser*&quot;,&quot;language&quot;:&quot;lucene&quot;},&quot;label&quot;:&quot;Revenue Trousers&quot;,&quot;value_template&quot;:&quot;${{value}}&quot;,&quot;split_color_mode&quot;:&quot;gradient&quot;},{&quot;id&quot;:&quot;062d77b0-b88e-11e8-a451-f37365e9f268&quot;,&quot;color&quot;:&quot;rgba(191,240,129,1)&quot;,&quot;split_mode&quot;:&quot;everything&quot;,&quot;metrics&quot;:[{&quot;id&quot;:&quot;062d77b1-b88e-11e8-a451-f37365e9f268&quot;,&quot;type&quot;:&quot;sum&quot;,&quot;field&quot;:&quot;taxful_total_price&quot;}],&quot;separate_axis&quot;:0,&quot;axis_position&quot;:&quot;right&quot;,&quot;formatter&quot;:&quot;number&quot;,&quot;chart_type&quot;:&quot;line&quot;,&quot;line_width&quot;:1,&quot;point_size&quot;:1,&quot;fill&quot;:&quot;0.7&quot;,&quot;stacked&quot;:&quot;none&quot;,&quot;filter&quot;:{&quot;query&quot;:&quot;products.product_name:*watch*&quot;,&quot;language&quot;:&quot;lucene&quot;},&quot;label&quot;:&quot;Revenue Watches&quot;,&quot;value_template&quot;:&quot;${{value}}&quot;,&quot;split_color_mode&quot;:&quot;gradient&quot;},{&quot;id&quot;:&quot;61ca57f1-469d-11e7-af02-69e470af7417&quot;,&quot;color&quot;:&quot;rgba(23,233,230,1)&quot;,&quot;split_mode&quot;:&quot;everything&quot;,&quot;metrics&quot;:[{&quot;id&quot;:&quot;61ca57f2-469d-11e7-af02-69e470af7417&quot;,&quot;type&quot;:&quot;sum&quot;,&quot;field&quot;:&quot;taxful_total_price&quot;}],&quot;separate_axis&quot;:0,&quot;axis_position&quot;:&quot;right&quot;,&quot;formatter&quot;:&quot;number&quot;,&quot;chart_type&quot;:&quot;line&quot;,&quot;line_width&quot;:1,&quot;point_size&quot;:1,&quot;fill&quot;:&quot;0.7&quot;,&quot;stacked&quot;:&quot;none&quot;,&quot;filter&quot;:{&quot;query&quot;:&quot;products.product_name:*bag*&quot;,&quot;language&quot;:&quot;lucene&quot;},&quot;label&quot;:&quot;Revenue Bags&quot;,&quot;value_template&quot;:&quot;${{value}}&quot;,&quot;split_color_mode&quot;:&quot;gradient&quot;},{&quot;id&quot;:&quot;faa2c170-b88d-11e8-a451-f37365e9f268&quot;,&quot;color&quot;:&quot;rgba(235,186,180,1)&quot;,&quot;split_mode&quot;:&quot;everything&quot;,&quot;metrics&quot;:[{&quot;id&quot;:&quot;faa2c171-b88d-11e8-a451-f37365e9f268&quot;,&quot;type&quot;:&quot;sum&quot;,&quot;field&quot;:&quot;taxful_total_price&quot;}],&quot;separate_axis&quot;:0,&quot;axis_position&quot;:&quot;right&quot;,&quot;formatter&quot;:&quot;number&quot;,&quot;chart_type&quot;:&quot;line&quot;,&quot;line_width&quot;:1,&quot;point_size&quot;:1,&quot;fill&quot;:&quot;0.7&quot;,&quot;stacked&quot;:&quot;none&quot;,&quot;filter&quot;:{&quot;query&quot;:&quot;products.product_name:*cocktail dress*&quot;,&quot;language&quot;:&quot;lucene&quot;},&quot;label&quot;:&quot;Revenue Cocktail Dresses&quot;,&quot;value_template&quot;:&quot;${{value}}&quot;,&quot;split_color_mode&quot;:&quot;gradient&quot;}],&quot;time_field&quot;:&quot;order_date&quot;,&quot;index_pattern&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;interval&quot;:&quot;&gt;=12h&quot;,&quot;axis_position&quot;:&quot;left&quot;,&quot;axis_formatter&quot;:&quot;number&quot;,&quot;axis_scale&quot;:&quot;normal&quot;,&quot;show_legend&quot;:1,&quot;show_grid&quot;:1,&quot;legend_position&quot;:&quot;bottom&quot;,&quot;annotations&quot;:[{&quot;fields&quot;:&quot;taxful_total_price&quot;,&quot;template&quot;:&quot;Ring the bell! ${{taxful_total_price}}&quot;,&quot;index_pattern&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;query_string&quot;:{&quot;query&quot;:&quot;taxful_total_price:&gt;250&quot;,&quot;language&quot;:&quot;lucene&quot;},&quot;id&quot;:&quot;c8c30be0-b88f-11e8-a451-f37365e9f268&quot;,&quot;color&quot;:&quot;rgba(25,77,51,1)&quot;,&quot;time_field&quot;:&quot;order_date&quot;,&quot;icon&quot;:&quot;fa-bell&quot;,&quot;ignore_global_filters&quot;:1,&quot;ignore_panel_filters&quot;:1}],&quot;tooltip_mode&quot;:&quot;show_all&quot;}],&quot;state&quot;:{},&quot;savedObjectId&quot;:&quot;unsaved&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/metrics/vis/data</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/metrics/vis/data" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timerange&quot;:{&quot;timezone&quot;:&quot;Asia/Jakarta&quot;,&quot;min&quot;:&quot;2020-11-19T23:03:52.961Z&quot;,&quot;max&quot;:&quot;2020-11-26T23:03:52.961Z&quot;},&quot;query&quot;:[{&quot;language&quot;:&quot;kuery&quot;,&quot;query&quot;:&quot;&quot;}],&quot;filters&quot;:[],&quot;panels&quot;:[{&quot;id&quot;:&quot;61ca57f0-469d-11e7-af02-69e470af7417&quot;,&quot;type&quot;:&quot;gauge&quot;,&quot;series&quot;:[{&quot;id&quot;:&quot;61ca57f1-469d-11e7-af02-69e470af7417&quot;,&quot;color&quot;:&quot;#68BC00&quot;,&quot;split_mode&quot;:&quot;everything&quot;,&quot;metrics&quot;:[{&quot;id&quot;:&quot;61ca57f2-469d-11e7-af02-69e470af7417&quot;,&quot;type&quot;:&quot;count&quot;}],&quot;separate_axis&quot;:0,&quot;axis_position&quot;:&quot;right&quot;,&quot;formatter&quot;:&quot;number&quot;,&quot;chart_type&quot;:&quot;line&quot;,&quot;line_width&quot;:1,&quot;point_size&quot;:1,&quot;fill&quot;:0.5,&quot;stacked&quot;:&quot;none&quot;,&quot;label&quot;:&quot;Trxns / day&quot;,&quot;split_color_mode&quot;:&quot;gradient&quot;}],&quot;time_field&quot;:&quot;order_date&quot;,&quot;index_pattern&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;interval&quot;:&quot;1d&quot;,&quot;axis_position&quot;:&quot;left&quot;,&quot;axis_formatter&quot;:&quot;number&quot;,&quot;axis_scale&quot;:&quot;normal&quot;,&quot;show_legend&quot;:1,&quot;show_grid&quot;:1,&quot;gauge_color_rules&quot;:[{&quot;value&quot;:150,&quot;id&quot;:&quot;6da070c0-b891-11e8-b645-195edeb9de84&quot;,&quot;gauge&quot;:&quot;rgba(104,188,0,1)&quot;,&quot;operator&quot;:&quot;gte&quot;},{&quot;value&quot;:150,&quot;id&quot;:&quot;9b0cdbc0-b891-11e8-b645-195edeb9de84&quot;,&quot;gauge&quot;:&quot;rgba(244,78,59,1)&quot;,&quot;operator&quot;:&quot;lt&quot;}],&quot;gauge_width&quot;:&quot;15&quot;,&quot;gauge_inner_width&quot;:10,&quot;gauge_style&quot;:&quot;half&quot;,&quot;filter&quot;:&quot;&quot;,&quot;gauge_max&quot;:&quot;300&quot;,&quot;tooltip_mode&quot;:&quot;show_all&quot;}],&quot;state&quot;:{},&quot;savedObjectId&quot;:&quot;unsaved&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/metrics/vis/data</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/api/saved_objects/_bulk_get" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">[{&quot;id&quot;:&quot;ff959d40-b880-11e8-a6d9-e546fe2bba5f&quot;,&quot;type&quot;:&quot;index-pattern&quot;}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/saved_objects/_bulk_get</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;size&quot;:0,&quot;aggs&quot;:{&quot;maxAgg&quot;:{&quot;max&quot;:{&quot;field&quot;:&quot;total_quantity&quot;}},&quot;minAgg&quot;:{&quot;min&quot;:{&quot;field&quot;:&quot;total_quantity&quot;}}},&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.146Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.146Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;timeout&quot;:&quot;1000ms&quot;,&quot;terminate_after&quot;:100000,&quot;size&quot;:0,&quot;aggs&quot;:{&quot;termsAgg&quot;:{&quot;terms&quot;:{&quot;order&quot;:{&quot;_count&quot;:&quot;desc&quot;},&quot;field&quot;:&quot;manufacturer.keyword&quot;}}},&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.147Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.147Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;timeout&quot;:&quot;1000ms&quot;,&quot;terminate_after&quot;:100000,&quot;size&quot;:0,&quot;aggs&quot;:{&quot;termsAgg&quot;:{&quot;terms&quot;:{&quot;order&quot;:{&quot;_count&quot;:&quot;desc&quot;},&quot;field&quot;:&quot;category.keyword&quot;}}},&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.148Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.148Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;version&quot;:true,&quot;size&quot;:500,&quot;sort&quot;:[{&quot;order_date&quot;:{&quot;order&quot;:&quot;desc&quot;,&quot;unmapped_type&quot;:&quot;boolean&quot;}}],&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.335Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.335Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}},&quot;highlight&quot;:{&quot;pre_tags&quot;:[&quot;@kibana-highlighted-field@&quot;],&quot;post_tags&quot;:[&quot;@/kibana-highlighted-field@&quot;],&quot;fields&quot;:{&quot;*&quot;:{}},&quot;fragment_size&quot;:2147483647}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;size&quot;:0,&quot;aggs&quot;:{&quot;gridSplit&quot;:{&quot;geotile_grid&quot;:{&quot;field&quot;:&quot;geoip.location&quot;,&quot;precision&quot;:4,&quot;size&quot;:10000},&quot;aggs&quot;:{&quot;gridCentroid&quot;:{&quot;geo_centroid&quot;:{&quot;field&quot;:&quot;geoip.location&quot;}}}}},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.619Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.619Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;filter&quot;:[{&quot;match_all&quot;:{}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;2&quot;:{&quot;terms&quot;:{&quot;field&quot;:&quot;customer_gender&quot;,&quot;order&quot;:{&quot;_count&quot;:&quot;desc&quot;},&quot;size&quot;:5}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.613Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.613Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;2&quot;:{&quot;date_histogram&quot;:{&quot;field&quot;:&quot;order_date&quot;,&quot;fixed_interval&quot;:&quot;3h&quot;,&quot;time_zone&quot;:&quot;Asia/Jakarta&quot;,&quot;min_doc_count&quot;:1},&quot;aggs&quot;:{&quot;3&quot;:{&quot;terms&quot;:{&quot;field&quot;:&quot;category.keyword&quot;,&quot;order&quot;:{&quot;1&quot;:&quot;desc&quot;},&quot;size&quot;:5},&quot;aggs&quot;:{&quot;1&quot;:{&quot;sum&quot;:{&quot;field&quot;:&quot;total_quantity&quot;}}}}}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.624Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.624Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;1&quot;:{&quot;sum&quot;:{&quot;field&quot;:&quot;taxful_total_price&quot;}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.627Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.627Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;1&quot;:{&quot;avg&quot;:{&quot;field&quot;:&quot;taxful_total_price&quot;}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.628Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.628Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;1&quot;:{&quot;avg&quot;:{&quot;field&quot;:&quot;total_quantity&quot;}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.630Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.630Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{&quot;2&quot;:{&quot;terms&quot;:{&quot;field&quot;:&quot;products.product_name.keyword&quot;,&quot;order&quot;:{&quot;_count&quot;:&quot;desc&quot;},&quot;size&quot;:7}}},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.632Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.632Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://localhost:5601/internal/search/es" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;params&quot;:{&quot;index&quot;:&quot;kibana_sample_data_ecommerce&quot;,&quot;body&quot;:{&quot;aggs&quot;:{},&quot;size&quot;:0,&quot;stored_fields&quot;:[&quot;*&quot;],&quot;script_fields&quot;:{},&quot;docvalue_fields&quot;:[{&quot;field&quot;:&quot;customer_birth_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;order_date&quot;,&quot;format&quot;:&quot;date_time&quot;},{&quot;field&quot;:&quot;products.created_on&quot;,&quot;format&quot;:&quot;date_time&quot;}],&quot;_source&quot;:{&quot;excludes&quot;:[]},&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:[],&quot;filter&quot;:[{&quot;match_all&quot;:{}},{&quot;range&quot;:{&quot;order_date&quot;:{&quot;gte&quot;:&quot;2020-11-19T23:03:53.634Z&quot;,&quot;lte&quot;:&quot;2020-11-26T23:03:53.634Z&quot;,&quot;format&quot;:&quot;strict_date_optional_time&quot;}}}],&quot;should&quot;:[],&quot;must_not&quot;:[]}}},&quot;preference&quot;:1606431226263}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">5601</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">internal/search/es</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
