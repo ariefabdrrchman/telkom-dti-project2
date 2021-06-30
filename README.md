@@ -1,2 +1,2 @@
 # telkom-dti-project2
-Elasticsearch Performance Testing Using JMeter
+Elasticsearch Performance Test Using JMeter
